@@ -403,11 +403,25 @@
 
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system/priv-app/MotoActions/MotoActions.apk</item>
+
+    <!-- Default files to pin via Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>"/system/framework/arm64/boot-framework.oat"</item>
+        <item>"/system/framework/boot-framework.vdex"</item>
+        <item>"/system/framework/oat/arm64/services.odex"</item>
+        <item>"/system/framework/oat/arm64/services.vdex"</item>
+        <item>"/system/framework/arm64/boot.oat"</item>
+        <item>"/system/framework/boot.vdex"</item>
+        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
+        <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/system/priv-app/SystemUI/oat/arm64/SystemUI.vdex"</item>
+        <item>"/system/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
+        <item>"/system/lib64/libsurfaceflinger.so"</item>
     </string-array>
 
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>com.moto.actions.KeyHandler</item>
-</string-array>
+    </string-array>
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>

@@ -63,4 +63,9 @@
     <item name="cpu.idle">4</item>
     <item name="cpu.awake">7</item>
     <item name="battery.capacity">3000</item>
+    <item name="wifi.controller.idle">0.585</item>
+    <item name="wifi.controller.rx">65.896</item>
+    <item name="wifi.controller.tx">130.159</item>
+    <array name="wifi.controller.tx_levels" />
+    <item name="wifi.controller.voltage">184.53</item>
 </device>

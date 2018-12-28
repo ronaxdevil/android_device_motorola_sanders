@@ -313,3 +313,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     config.foss.xml=1 \
     config.foss.path=/vendor/etc/FOSSConfig.xml
 
+#IDKY
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.model=sanders
+
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=@Ronax

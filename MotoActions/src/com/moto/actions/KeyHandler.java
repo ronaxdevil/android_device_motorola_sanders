@@ -60,7 +60,7 @@ import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.ViewConfiguration;
 
-import com.android.internal.os.DeviceKeyHandler;
+import com.android.internal.util.omni.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
 
 import com.moto.actions.util.FileUtils;

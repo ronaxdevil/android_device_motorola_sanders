@@ -396,6 +396,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
+# Volume Steps
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=25 \
+    ro.config.vc_call_vol_steps=7
+
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \

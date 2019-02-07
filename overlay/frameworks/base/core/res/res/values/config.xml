@@ -421,6 +421,9 @@
         <item>com.moto.actions.KeyHandler</item>
     </string-array>
 
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
     <!-- Default value for proximity check on screen wake
          NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
     <bool name="config_proximityCheckOnWake">true</bool>

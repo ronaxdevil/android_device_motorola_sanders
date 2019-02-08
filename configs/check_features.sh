@@ -21,5 +21,5 @@ else
     # If not... Remove DTV APKs and libs
     rm -r /system/priv-app/DTVPlayer
     rm -r /system/priv-app/DTVService
-    rm /system/lib*/libdtv*.so
+    rm /vendor/lib*/libdtv*.so
 fi

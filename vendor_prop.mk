@@ -80,7 +80,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.dec.downscalar_height=1088 \
     vidc.dec.disable.split.cpu=1 \
     video.disable.ubwc=1 \
-    vendor.camera.aux.packagelist=com.motorola.camera2,com.google.android.Pixel2Mod
+    vendor.camera.aux.packagelist=com.motorola.camera2,com.google.android.Pixel2Mod \
+    media.camera.ts.monotonic=1 \
+    persist.camera.time.monotonic=1 \
+    persist.camera.eis.enable=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -311,20 +314,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.radio.force_on_dc=true \
-persist.radio.custom_ecc=1 \
-persist.radio.data_con_rprt=1 \
-persist.vendor.radio.data_ltd_sys_ind=1 \
-persist.radio.data_ltd_sys_ind=1 \
-persist.vendor.radio.ignore_dom_time=10 \
-persist.radio.ignore_dom_time=10 \
-persist.radio.rat_on=combine \
-persist.radio.is_wps_enabled=true \
-persist.radio.videopause.mode=1 \
-persist.radio.sap_silent_pin=1 \
-persist.radio.always_send_plmn=true \
-persist.rcs.supported=1 \
-persist.dbg.ims_volte_enable=1
+    persist.vendor.radio.force_on_dc=true \
+    persist.radio.custom_ecc=1 \
+    persist.radio.data_con_rprt=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.radio.ignore_dom_time=10 \
+    persist.radio.rat_on=combine \
+    persist.radio.is_wps_enabled=true \
+    persist.radio.videopause.mode=1 \
+    persist.radio.sap_silent_pin=1 \
+    persist.radio.always_send_plmn=true \
+    persist.rcs.supported=1 \
+    persist.dbg.ims_volte_enable=1
 
 # FOSS CONFIGS
 PRODUCT_PROPERTY_OVERRIDES += \

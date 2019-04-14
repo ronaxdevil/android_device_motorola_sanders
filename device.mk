@@ -177,8 +177,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni \
+    FM2 \
+    libqcomfm_jni \
     init.qti.fm.sh
 
 # Gatekeeper HAL

@@ -340,6 +340,7 @@ PRODUCT_PACKAGES += \
     init.mmi.rc \
     init.mmi.usb.rc \
     init.spectrum.rc \
+    init.spectrum.sh \
     init.class_main.sh \
     init.qcom.power.rc \
     init.qcom.rc \
@@ -469,6 +470,8 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
 
 export export HAVOC_BUILD_TYPE=Official
 

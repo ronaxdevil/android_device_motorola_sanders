@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 #Google Camera
-        Gcam \
+PRODUCT_PACKAGES += \
+    Gcam
 
 # GPS
 PRODUCT_PACKAGES += \

@@ -472,4 +472,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 export export HAVOC_BUILD_TYPE=Official
 
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
 

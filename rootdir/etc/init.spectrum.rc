@@ -1,16 +1,12 @@
 # Initialization
 on property:sys.boot_completed=1
    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chown system system /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
    chown system system /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
    chown system system /sys/module/workqueue/paramaters/power_efficient
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-   chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-   chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
    chmod system system /sys/class/kgsl/kgsl-3d0/devfreq/governor
@@ -33,7 +29,10 @@ on property:persist.spectrum.profile=0
     # CPU
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor blu_schedutil
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1958400
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 200
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/iowait_boost_enable 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 4500
     write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient Y
 
@@ -64,25 +63,20 @@ on property:persist.spectrum.profile=0
 # Performance
 on property:persist.spectrum.profile=2
     # CPU
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor blu_active
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
-    write /sys/devices/system/cpu/cpufreq/blu_active/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpufreq/blu_active/above_hispeed_delay 0
-    write /sys/devices/system/cpu/cpufreq/blu_active/timer_rate 40000
-    write /sys/devices/system/cpu/cpufreq/blu_active/hispeed_freq 2016000
-    write /sys/devices/system/cpu/cpufreq/blu_active/timer_slack 480000
-    write /sys/devices/system/cpu/cpufreq/blu_active/min_sample_time 70000
-    write /sys/devices/system/cpu/cpufreq/blu_active/boost 1
-    write /sys/devices/system/cpu/cpufreq/blu_active/align_windows 0
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2208000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/iowait_boost_enable 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
     write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient N
 
     # GPU
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor msm-adreno-tz
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 700000000
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 700000000
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
@@ -112,15 +106,15 @@ on property:persist.spectrum.profile=3
     # CPU
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2016000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 2208000
     write /sys/module/msm_performance/parameters/touchboost 1
     write /sys/module/workqueue/parameters/power_efficient N
 
     # GPU
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/governor performance
     write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/min_freq 133000000
-    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 650000000
-    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 650000000
+    write /sys/devices/soc/1c00000.qcom,kgsl-3d0/devfreq/1c00000.qcom,kgsl-3d0/max_freq 750000000
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 750000000
 
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048

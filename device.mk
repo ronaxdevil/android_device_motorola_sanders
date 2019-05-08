@@ -103,10 +103,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-# Spectrum (for initial config)
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.spectrum.profile=0
-
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
@@ -340,9 +336,6 @@ PRODUCT_PACKAGES += \
     init.mmi.boot.sh \
     init.mmi.rc \
     init.mmi.usb.rc \
-    init.spectrum.rc \
-    init.class_main.sh \
-    init.qcom.power.rc \
     init.qcom.rc \
     init.qcom.sensors.sh \
     init.sanders.rc
@@ -474,4 +467,3 @@ PRODUCT_GMS_CLIENTID_BASE := android-motorola
 export export HAVOC_BUILD_TYPE=Official
 
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8996/kernel-headers
-

@@ -398,15 +398,6 @@
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
-    <!-- Should proximity check also affect fingerprint reader
-    <bool name="config_proximityCheckOnFingerprintWake">true</bool>-->
-
-    <!-- Whether notify fingerprint client of successful cancelled authentication
-    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>-->
-
-    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
-        <item>/system/priv-app/MotoActions/MotoActions.apk</item>
-
     <!-- Default files to pin via Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-framework.oat"</item>
@@ -422,9 +413,19 @@
         <item>"/system/lib64/libsurfaceflinger.so"</item>
     </string-array>
 
+    <!-- Should proximity check also affect fingerprint reader
+    <bool name="config_proximityCheckOnFingerprintWake">true</bool>-->
+
+    <!-- Whether notify fingerprint client of successful cancelled authentication
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>-->
+
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system/priv-app/MotoActions/MotoActions.apk</item>
+    </string-array>
+
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>com.moto.actions.KeyHandler</item>
-    </string-array>
+</string-array>
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>
@@ -457,19 +458,6 @@
     <!-- Support in Surfaceflinger for blur layers.
          NOTE: This requires additional hardware-specific code. -->
     <!--<bool name="config_uiBlurEnabled">true</bool>-->
-
-    <!-- Default files to pin via Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/arm64/boot-framework.oat"</item>
-        <item>"/system/framework/boot-framework.vdex"</item>
-        <item>"/system/framework/oat/arm64/services.odex"</item>
-        <item>"/system/framework/oat/arm64/services.vdex"</item>
-        <item>"/system/framework/arm64/boot.oat"</item>
-        <item>"/system/framework/boot.vdex"</item>
-        <item>"/system/framework/arm64/boot-core-libart.oat"</item>
-        <item>"/system/framework/boot-core-libart.vdex"</item>
-        <item>"/system/lib64/libsurfaceflinger.so"</item>
-    </string-array>
 
    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
    in hardware. -->
@@ -519,5 +507,4 @@
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">true</bool>
-
 </resources>

@@ -368,7 +368,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.havoc.maintainer=@Ronax
+    ro.havoc.maintainer=RONAX
 
 # Spectrum
 PRODUCT_PROPERTY_OVERRIDES += \

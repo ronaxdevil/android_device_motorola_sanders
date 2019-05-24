@@ -1,0 +1,26 @@
+[
+  {
+    "remote": "github",
+    "repository":  "lit-kernel/android_kernel_motorola_msm8953",
+    "target_path": "kernel/motorola/msm8953",
+    "branch": "pie"
+  },
+  {
+    "remote": "github",
+    "repository": "PixelExperience-Devices/vendor_motorola_sanders",
+    "target_path": "vendor/motorola/sanders",
+    "branch": "pie"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "lineage-16.0"
+  },
+  {
+    "remote": "pixel",
+    "repository": "packages_resources_MotoActions",
+    "target_path": "packages/resources/MotoActions",
+    "branch": "pie"
+  }
+]

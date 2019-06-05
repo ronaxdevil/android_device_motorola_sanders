@@ -371,6 +371,14 @@ persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.data_lte_sys_ind=1
 
+# FOSS CONFIGS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qcom.dpps.sensortype=3 \
+    ro.qualcomm.display.paneltype=1 \
+    ro.qualcomm.foss=1 \
+    config.foss.xml=1 \
+    config.foss.path=/vendor/etc/FOSSConfig.xml
+
 # Spectrum
 PRODUCT_PROPERTY_OVERRIDES += \
     spectrum.support=1 \

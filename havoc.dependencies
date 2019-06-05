@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "github",
+    "repository": "omnirom/android_packages_apps_SnapdragonCamera2",
+    "target_path": "packages/apps/SnapdragonCamera2",
+    "branch": "android-9.0"
+  }
+]

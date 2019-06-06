@@ -469,9 +469,6 @@
    in hardware. -->
    <bool name="config_setColorTransformAccelerated">true</bool>
    
-    <!-- enable doze powersaving mode -->
-    <bool name="config_enableAutoPowerModes">true</bool>
-
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
@@ -499,9 +496,6 @@
 
     <!-- Show battery fully charged notification -->
     <bool name="config_showBatteryFullyChargedNotification">true</bool>
-
-     <!-- Enable dual LTE capability support-->
-    <bool name="config_dual_LTE_capability">true</bool>
 
     <!-- Whether device needs to wait for Qualcomm MPCTL service to start
          before setting power profiles on boot. -->

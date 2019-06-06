@@ -26,7 +26,7 @@ $(call inherit-product, device/motorola/sanders/device.mk)
 $(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
 
 # Inherit some Common Rom Stuff.
-$(call inherit-product, vendor/havoc/config/common.mk)
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -34,7 +34,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := havoc_sanders
+PRODUCT_NAME := bliss_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 

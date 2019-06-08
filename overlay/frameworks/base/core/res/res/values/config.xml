@@ -420,13 +420,11 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>-->
 
-    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
-        <item>/system/priv-app/MotoActions/MotoActions.apk</item>
-    </string-array>
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string name="config_deviceKeyHandlerLib" translatable="false">/system/priv-app/MotoActions/MotoActions.apk</string>
 
-    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.moto.actions.KeyHandler</item>
-</string-array>
+    <!-- Names of the key handler classes -->
+    <string name="config_deviceKeyHandlerClass" translatable="false">com.moto.actions.KeyHandler</string>
 
     <!-- Should the pinner service pin the Home application? -->
     <bool name="config_pinnerHomeApp">true</bool>

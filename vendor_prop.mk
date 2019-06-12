@@ -90,7 +90,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.dec.disable.split.cpu=1 \
     video.disable.ubwc=1 \
     vendor.camera.aux.packagelist=com.motorola.camera2,com.google.android.Pixel2Mod \
-    camera.hal1.packagelist=com.instagram.android,com.whatsapp
+    camera.hal1.packagelist=com.instagram.android,com.whatsapp \
+    camera.lowpower.record.enable=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -140,7 +141,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.enable.sglscale=1 \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
-    vendor.display.disable_skip_validate=1
+    vendor.display.disable_skip_validate=1 \
+    ro.qualcomm.cabl=0 \
+    ro.vendor.display.cabl=2
 
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -178,7 +181,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1 \
-    persist.radio.data_lte_sys_ind=1
+    persist.radio.data_lte_sys_ind=1 \
+    service.qti.ims.enabled=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -319,7 +323,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.cs_srv_type=1 \
     persist.dbg.ims_volte_enable=1 \
     persist.data.qmi.adb_logmask=0 \
-    telephony.lteOnCdmaDevice=1
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -337,16 +340,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.sensors.pmd=false \
+    ro.vendor.sensors.pmd=true \
     ro.vendor.sensors.sta_detect=true \
     ro.vendor.sensors.mot_detect=true \
-    ro.vendor.sensors.amd=false \
-    ro.vendor.sensors.rmd=false \
-    ro.vendor.sdk.sensors.gestures=false \
-    ro.vendor.sensors.facing=false \
-    ro.vendor.sensors.scrn_ortn=false \
-    ro.vendor.sensors.pedometer=false \
-    ro.vendor.sensors.glance_approach=false \
+    ro.vendor.sensors.amd=true \
+    ro.vendor.sensors.rmd=true \
+    ro.vendor.sdk.sensors.gestures=true \
+    ro.vendor.sensors.facing=true \
+    ro.vendor.sensors.scrn_ortn=true \
+    ro.vendor.sensors.pedometer=true \
+    ro.vendor.sensors.glance_approach=true \
     ro.hardware.sensors=sanders
 
 #Trim properties
@@ -410,3 +413,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.interface=wlan0
+

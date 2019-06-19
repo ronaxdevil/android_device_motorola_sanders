@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package com.moto.actions;
 
 import android.os.Bundle;
 import android.provider.Settings;
@@ -24,8 +24,8 @@ import android.support.v14.preference.PreferenceFragment;
 import android.view.MenuItem;
 
 import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
-import static org.lineageos.settings.device.actions.Constants.KEY_GESTURE_ENABLE_HAPTIC_FEEDBACK;
-import static org.lineageos.settings.device.actions.Constants.KEY_GESTURE_ENABLE_PROXIMITY_SENSOR;
+import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_HAPTIC_FEEDBACK;
+import static com.moto.actions.actions.Constants.KEY_GESTURE_ENABLE_PROXIMITY_SENSOR;
 
 public class ScreenOffGestureSettingsFragment extends PreferenceFragment {
 

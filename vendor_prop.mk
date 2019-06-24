@@ -393,7 +393,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Spectrum
 PRODUCT_PROPERTY_OVERRIDES += \
     spectrum.support=1 \
-    persist.spectrum.kernel=MAYHEM
+    persist.spectrum.kernel=MAYHEM-Unravel-3.0
 
 # Create Swap disk, if below sys-prop enabled & also if device has lower (< 1 GB) RAM
 PRODUCT_PROPERTY_OVERRIDES += \

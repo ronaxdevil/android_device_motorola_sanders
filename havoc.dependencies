@@ -1,14 +1,33 @@
 [
   {
-    "repository": "android_vendor_motorola_sanders",
-    "target_path": "vendor/motorola/sanders"
+    "remote": "github",
+    "repository": "ronaxdevil/vendor_motorola_sanders",
+    "target_path": "vendor/motorola/sanders",
+    "revision": "stable-h"
   },
   {
-    "repository": "android_kernel_motorola_sanders",
-    "target_path": "kernel/motorola/msm8953"
+    "remote": "github",
+    "repository": "ronaxdevil/mayhem-kernel",
+    "target_path": "kernel/motorola/msm8953",
+    "revision": "u-v3"
   },
   {
-    "repository": "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
+    "remote": "github",
+    "repository": "ArrowOS-Devices/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "revision": "arrow-9.x"
+  },
+  {
+    "remote": "github",
+    "repository": "omnirom/android_packages_apps_SnapdragonCamera2",
+    "target_path": "packages/apps/SnapdragonCamera2",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "github",
+    "repository": "omnirom/android_system_qcom",
+    "target_path": "system/qcom",
+    "revision": "android-9.0"
   }
 ]
+
